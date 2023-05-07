@@ -29,7 +29,7 @@ export async function POST(request : NextRequest){
     const req = await request.json();
     const newTask: NewTask ={
     taskname: req.taskName,
-    isdone: req.IsDone,
+    isdone: req.Isdone,
     };
 console.log(db);
 const insertedUsers = await db.insert(tasks).values(newTask).returning();
