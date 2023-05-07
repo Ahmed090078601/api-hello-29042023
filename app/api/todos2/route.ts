@@ -8,6 +8,7 @@ const pool = new Pool({
     connectionString: "postgres://default:pYIHDxF38NGO@ep-bitter-frost-369107.us-east-1.postgres.vercel-storage.com:5432/verceldb",
   });
 
+  const db = drizzle(sql)
 //   const db: NodePgDatabase = drizzle(pool);
 // const db = drizzle(sql)
 
