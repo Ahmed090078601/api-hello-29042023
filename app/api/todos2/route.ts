@@ -1,8 +1,9 @@
 import { NodePgDatabase, drizzle } from 'drizzle-orm/node-postgres';
 import { boolean, integer, pgTable, serial, text, timestamp, varchar } from 'drizzle-orm/pg-core';
-import { InferModel, eq, sql } from 'drizzle-orm';
+import { InferModel, eq} from 'drizzle-orm';
 import { Pool } from 'pg';
 import { NextRequest, NextResponse } from 'next/server';
+import { sql } from '@vercel/postgres';
 
 const pool = new Pool({
     connectionString: "postgres://default:pYIHDxF38NGO@ep-bitter-frost-369107.us-east-1.postgres.vercel-storage.com:5432/verceldb",
