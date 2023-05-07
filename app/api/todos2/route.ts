@@ -23,7 +23,7 @@ const tasks = pgTable('tasks',{
 export type Task = InferModel<typeof tasks>;
 export type NewTask = InferModel<typeof tasks, 'insert'>;
 
-export async function Get(){
+export async function GET(){
     console.log(db);
     const allTasks = await db.select().from(tasks);
     return NextResponse.json(allTasks)
